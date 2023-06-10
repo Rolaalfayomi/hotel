@@ -27,12 +27,12 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link  active" href="#">
+                    <a class="nav-link  active" href="#" data-bs-toggle="modal" data-bs-target="#serviceexampleModal">
          
                       Services</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#"> 
+                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
                       About</a>
                   </li>
                   <li class="nav-item dropdown">
@@ -53,30 +53,31 @@
           </nav>
      </section>
      <!-- start slider -->
-    <section>
-        <div id="carouselExampleCaptions" class="carousel slide">
+    <section class="slide">
+      <div class="container" style="text-align: center;">
+        <div id="carouselExampleCaptions" class="carousel slide ss  ">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./img/lgPP32128.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-inner   ">
+              <div  class="carousel-item active">
+                <img src="./img/lgPP32128.jpg" alt="..." width="1090px" height="500px">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>First slide label</h5>
                   <p>Some representative placeholder content for the first slide.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="./img/lgPP32128.jpg" class="d-block w-100" alt="...">
+                <img src="./img/lgPP32128.jpg"  width="1090px" height="500px" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Second slide label</h5>
                   <p>Some representative placeholder content for the second slide.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="./img/lgPP32128.jpg" class="d-block w-100" alt="...">
+                <img src="./img/lgPP32128.jpg" width="1090px" height="500px" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Third slide label</h5>
                   <p>Some representative placeholder content for the third slide.</p>
@@ -92,10 +93,100 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+        </div>
+        
     </section>
-    <section>
-        Contents
+    <section id="pricing">
+        <div class="container" > 
+
+          <div class="row">
+            <div class="col-2">
+              <div class="card" style="width: 18rem;">
+                <img src="./img/icons8-free-64.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card" style="width: 18rem;">
+                <img src="./img/icons8-free-64.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card" style="width: 18rem;">
+                <img src="./img/icons8-free-64.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="card" style="width: 18rem;">
+                <img src="./img/icons8-free-64.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
+
+
+
+       
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">login</button>
+        <button type="button" class="btn btn-primary">Save </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+                 
+               
+                
+                <!-- Modal -->
+                <div class="modal fade" id="serviceexampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="serviceexampleModal">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">login</button>
+                        <button type="button" class="btn btn-primary">Save </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
     <footer>
         DOC
     </footer>
