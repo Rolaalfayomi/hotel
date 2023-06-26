@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.js"></script> -->
+    <script src="js/jquery.com_jquery-3.7.0.js"></script>
+    <title>JQuery Exapmles</title>
+
+    <!-- <script>
+        $("#mn").click(function(){
+                $("p").toggle();
+            });
+
+    </script> -->
+    <script>
+        $(document).ready(function(){
+            // $("#hide").click(function(){
+            //     $("p").toggle();
+            // });
+            // $("#show").click(function(){
+            //     $("p").show();
+            // });
+
+        //     $("button").click(function(){
+        //         $("#div1").fadeIn();
+        //         $("#div2").fadeIn("slow");
+        //         $("#div3").fadeIn(3000);
+        //     });
+
+        //     $("button").click(function(){
+        //         $("#div1").fadeOut();
+        //         $("#div2").fadeOut("slow");
+        //         $("#div3").fadeOut(3000);
+        //     });
+
+        //     $("button").click(function(){
+        //         $("#div1").fadeToggle();
+        //         $("#div2").fadeToggle("slow");
+        //         $("#div3").fadeToggle(3000);
+        //     });
+
+        //     $("button").click(function(){
+        //         $("#div1").fadeTo("slow", 0.15);
+        //         $("#div2").fadeTo("slow", 0.4);
+        //         $("#div3").fadeTo("slow", 0.7);
+        //     });
+
+        //     $("#flip").click(function(){
+        //         $("#panel").slideDown("slow");
+        //     });
+        //     $("#flip").click(function(){
+        //         $("#panel").slideUp("slow");
+        //     });
+        //     $("#flip").click(function(){
+        //         $("#panel").slideToggle("slow");
+        //     });
+
+        //     $("button").click(function(){
+        //         $("div").animate({
+        //         left: '250px',
+        //         opacity: '0.5',
+        //         height: '150px',
+        //         width: '150px'
+        //         });
+        //     });
+        //     $("button").click(function(){
+        //         var div = $("div");
+        //         div.animate({height: '300px', opacity: '0.4'}, "slow");
+        //         div.animate({width: '300px', opacity: '0.8'}, "slow");
+        //         div.animate({height: '100px', opacity: '0.4'}, "slow");
+        //         div.animate({width: '100px', opacity: '0.8'}, "slow");
+        //     });
+        //     $("button").click(function(){
+        //         var div = $("div");  
+        //         div.animate({left: '100px'}, "slow");
+        //         div.animate({fontSize: '3em'}, "slow");
+        //     });
+
+        //     $("#btn1").click(function(){
+        //         alert("Text: " + $("#test").text());
+        //     });
+        //     $("#btn2").click(function(){
+        //         alert("HTML: " + $("#test").html());
+        //     });
+        //     $("button").click(function(){
+        //         alert("Value: " + $("#test").val());
+        //     });
+
+            // append() - Inserts content at the end of the selected elements
+            // prepend() - Inserts content at the beginning of the selected elements
+            // after() - Inserts content after the selected elements
+            // before() - Inserts content before the selected elements
+            // remove() - Removes the selected element (and its child elements)
+            // empty() - Removes the child elements from the selected element
+            // addClass() - Adds one or more classes to the selected elements
+            // removeClass() - Removes one or more classes from the selected elements
+            // toggleClass() - Toggles between adding/removing classes from the selected elements
+            // css() - Sets or returns the style attribute
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <h1 id="title" style="border: 1px solid #000000;">FAQ</h1>
+    <div style="width: 100px; height: 100px; background-color: tomato; ;">
+        My text
+    </div>
+    <!-- <p>If you click on the "Hide" button, I will disappear.</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+
+    <p>Demonstrate fadeIn() with different parameters.</p>
+    <button>Click to fade in boxes</button><br><br>
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div> -->
+
+    <!-- <p>Demonstrate fadeOut() with different parameters.</p>
+    <button>Click to fade out boxes</button><br><br>    
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:blue;"></div> -->
+    
+
+    <!-- <p>Demonstrate fadeToggle() with different speed parameters.</p>
+    <button>Click to fade in/out boxes</button><br><br>
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:blue;"></div> -->
+
+    <!-- <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div> -->
+
+
+        <script>
+           $("#title").click(function(){
+                var div = $("div");
+                div.animate({height: '300px', opacity: '0.4', fontSize: 'xx-large'}, 6000);
+                div.animate({width: '300px', opacity: '0.8', color:'while'}, 6000);
+                div.animate({height: '100px', opacity: '0.4', fontSize: 'xx-small'}, 6000);
+                div.animate({width: '100px', opacity: '0.8'}, 6000);
+            });
+        </script>
+</body>
+</html>

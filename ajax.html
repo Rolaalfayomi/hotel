@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" 
+          content="IE=edge">
+    <meta name="viewport" 
+          content="width=device-width, 
+                           initial-scale=1.0">
+    <title>JSON in AJAX</title>
+    <style>
+        h1,
+        h3 {
+            text-align: center;
+            color: green;
+        }
+  
+        button {
+            margin-left: 36.5rem;
+        }
+  
+        #container {
+            text-align: center;
+        }
+    </style>
+  
+    <script>
+        function loadInformation() {
+              // Request
+            var request = new XMLHttpRequest();
+            // request.open("GET", "./json/data.json");
+            request.open("GET", "https://jsonplaceholder.typicode.com/todos/1");
+            request.send(); 
+            // Response
+            request.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {                   
+                    document.getElementById("container")
+                        .innerHTML = this.responseText;
+
+                    var person = JSON.parse(this.responseText);
+                    document.getElementById("name").innerHTML = person.name;
+                    document.getElementById("country").innerHTML = person.country;
+                }
+            }
+        }
+    </script>
+</head>
+  
+<body>
+    <h1>Geeks for Geeks</h1>
+    <h3>JSON in AJAX</h3>
+    <button onClick="loadInformation()">
+        Click to Load
+    </button>
+    <div id="container"></div>
+    <div id="name"></div>
+    <div id="country"></div>
+</body>
+  
+</html>
