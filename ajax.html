@@ -8,6 +8,14 @@
     <meta name="viewport" 
           content="width=device-width, 
                            initial-scale=1.0">
+                           <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+      
+
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
     <title>JSON in AJAX</title>
     <style>
         h1,
@@ -26,36 +34,75 @@
     </style>
   
     <script>
-        function loadInformation() {
-              // Request
+        function loadInformation() {              
             var request = new XMLHttpRequest();
             // request.open("GET", "./json/data.json");
-            request.open("GET", "https://jsonplaceholder.typicode.com/todos/1");
+            request.open("GET", "https://jsonplaceholder.typicode.com/todos/");
             request.send(); 
             // Response
             request.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {                   
-                    document.getElementById("container")
-                        .innerHTML = this.responseText;
+                    var titles = JSON.parse(this.responseText);
+                    let txt = "<table class=\"table\" id=\"mytable\">";
+                    txt += "<tr><th>id</th><th>UserId</th><th>Title</th><th>Compleated?</th></tr>";
+                    for(let i = 0; i < titles.length; i++){
+                        txt += "<tr>";
+                        txt += "<td>" + titles[i].id + "</td>";
+                        txt += "<td>" + titles[i].userId + "</td>";
+                        txt += "<td>" + titles[i].title + "</td>";
+                        txt += "<td>" + titles[i].completed + "</td>";
+                        txt += "</tr>";
+                    }
+                    
+                    txt += "</table>";
+                    
+                    document.getElementById("containt").innerHTML = txt;
+                            
+                    
+                    
+                    // document.getElementById("container")
+                    //     .innerHTML = this.responseText;
 
-                    var person = JSON.parse(this.responseText);
-                    document.getElementById("name").innerHTML = person.name;
-                    document.getElementById("country").innerHTML = person.country;
+                    // var person = JSON.parse(this.responseText);
+                    // document.getElementById("name").innerHTML = person.name;
+                    // document.getElementById("country").innerHTML = person.country;
+                    // document.getElementById("mydate").innerHTML = person.birth_date.day
+                    // + "/" + person.birth_date.month
+                    // + "/" + person.birth_date.year;
+                    // let m = person.Marks;
+                    // let sum = 0;
+                    // for(let i = 0; i < m.length; i++){
+                    //     sum += m[i];
+                    // }
+                    // document.getElementById("avg").innerHTML += (sum / m.length);
                 }
+                
+
             }
         }
     </script>
 </head>
   
 <body>
-    <h1>Geeks for Geeks</h1>
-    <h3>JSON in AJAX</h3>
     <button onClick="loadInformation()">
         Click to Load
     </button>
-    <div id="container"></div>
+    <!-- <div id="container"></div>
     <div id="name"></div>
     <div id="country"></div>
+    <div id="mydate"></div>
+    <div id="avg">Average: </div> -->
+
+    <div id="containt"></div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#mytable').DataTable(
+             
+            );
+        });
+    </script>
 </body>
   
 </html>

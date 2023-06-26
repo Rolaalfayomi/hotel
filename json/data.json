@@ -1,4 +1,10 @@
 {
-    "name": "brett",
-    "country": "Australia"
+    "name": "Ahmad",    
+    "country": "Australia",
+    "birth_date": {
+        "day": 1,
+        "month": 3,
+        "year": 2002
+    },
+    "Marks": [90, 70, 80, 90]
 }

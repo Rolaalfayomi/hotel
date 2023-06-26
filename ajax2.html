@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" 
+          content="IE=edge">
+    <meta name="viewport" 
+          content="width=device-width, 
+                           initial-scale=1.0">                           
+    <title>JSON in AJAX 2</title>
+    <script>
+        function loadInformation() {              
+            var request = new XMLHttpRequest();
+            request.open("GET", "https://my-json-server.typicode.com/typicode/demo/db");
+            request.send(); 
+            request.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {                   
+                    var db = JSON.parse(this.responseText);
+                    let posts = db.posts;
+                    let comments = db.comments;
+                    let profile = db.profile;
+                    document.getElementById("containt").innerHTML = "<h1>" + profile.name + "</h1>";
+                    document.getElementById("p1").innerHTML = posts[0].title;             
+                    
+                }     
+
+            }
+        }
+    </script>
+</head>
+  
+<body>
+    <div id="containt"></div>
+    <div id="p1"></div>
+    <script>
+        loadInformation();
+    </script>
+</body>
+  
+</html>
